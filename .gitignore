@@ -42,3 +42,5 @@ next-env.d.ts
 
 # ci temp artefacts
 .ci-tmp/
+coverage/
+reports/

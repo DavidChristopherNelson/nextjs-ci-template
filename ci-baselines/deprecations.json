@@ -1,0 +1,8 @@
+{
+  "deprecations": [
+    "glob@10.5.0",
+    "glob@7.2.3",
+    "inflight@1.0.6",
+    "whatwg-encoding@3.1.1"
+  ]
+}
