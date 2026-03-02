@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky",
+    "deps:baseline:freeze:deprecations": "node scripts/ci/npm-ci-deprecations-baseline.mjs freeze && npx prettier --write ci-baselines/deprecations.json",
+    "deps:baseline:check:deprecations": "node scripts/ci/npm-ci-deprecations-baseline.mjs check",
+    "deps:baseline:freeze:audit": "node scripts/ci/npm-audit-baseline.mjs freeze && npx prettier --write ci-baselines/audit.json",
+    "deps:baseline:check:audit": "node scripts/ci/npm-audit-baseline.mjs check",
+    "ci:all": "bash scripts/ci/all.sh",
+    "ci:fast": "bash scripts/ci/fast.sh"
   },
   "dependencies": {
     "next": "16.1.6",
@@ -22,7 +29,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
+    "eslint-config-prettier": "^10.1.8",
     "husky": "^9.1.7",
+    "prettier": "^3.8.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
